@@ -4,6 +4,7 @@ import com.github.pagehelper.PageHelper;
 import com.upsoft.semantic.domain.User;
 import com.upsoft.semantic.mapper.user.UserMapper;
 import com.upsoft.semantic.util.IDCreator;
+import org.apache.ibatis.logging.LogFactory;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.test.context.ContextConfiguration;
@@ -33,6 +34,7 @@ public class TestUserMapper {
 
     @Test
     public void testSelectUser(){
+        LogFactory.useSlf4jLogging();
         PageHelper.startPage(1, 10);
         List<User> users = userMapper.selectUsers();
         System.out.println(users);
