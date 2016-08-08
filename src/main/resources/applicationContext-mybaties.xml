@@ -19,15 +19,15 @@
 	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
 		<property name="configLocation" value="classpath:mybatis-config.xml"></property>
 		<property name="dataSource" ref="dataSource" />
-		<property name="mapperLocations" value="classpath*:com/upsoft/semantic/mapper/**/*.xml" />
+		<property name="mapperLocations" value="classpath*:com/upsoft/temder/web/mapper/**/*.xml" />
 	</bean>
 	<bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate">
 		<constructor-arg index="0" ref="sqlSessionFactory" />
 	</bean>
 	<!-- 配置扫描器 -->
 	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-		<!-- 扫描me.gacl.dao这个包以及它的子包下的所有映射接口类 -->
-		<property name="basePackage" value="com.upsoft.semantic.mapper" />
+		<!-- 扫描com.upsoft.temder.web.mapper这个包以及它的子包下的所有映射接口类 -->
+		<property name="basePackage" value="com.upsoft.temder.web.mapper" />
 		<property name="sqlSessionFactoryBeanName" value="sqlSessionFactory" />
 	</bean>
 </beans>

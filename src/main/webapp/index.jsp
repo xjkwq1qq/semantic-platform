@@ -1,8 +1,14 @@
+<!DOCTYPE html>
 <html>
+<head>
+    <meta http-equiv="refresh" content="0;url=pages/index.html">
+    <title>SB Admin 2</title>
+</head>
+<%@ include file="/common/header.jsp"%>
 <body>
-<h2>Hello World!</h2>
+Go to <a href="pages/index.html">/pages/index.html</a>
 </body>
-
-111
-aaa
+<script language="javascript">
+    window.location.href = "toindex"
+</script>
 </html>

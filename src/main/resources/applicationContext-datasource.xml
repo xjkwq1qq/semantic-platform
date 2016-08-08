@@ -43,7 +43,7 @@
     </tx:advice>
 
     <aop:config>
-        <aop:advisor advice-ref="txAdvice" pointcut="execution(* com.upsoft.hdb.service..*.*(..))"/>
+        <aop:advisor advice-ref="txAdvice" pointcut="execution(* com.upsoft.temder.web.service..*.*(..))"/>
     </aop:config>
 
 
